@@ -22,7 +22,7 @@ public class Hello {
         System.out.println(s3.charAt(1));
         s1 = "Hello John";
 
-        int j = s1.indexOf("rJo");
+        int j = s1.indexOf("Jo");
         System.out.println(j);
 
         System.out.println(s1.substring(3,6));
