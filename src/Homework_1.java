@@ -8,7 +8,6 @@ public class Homework_1 {
             else {
                 System.out.println("The Email " + i + " is Invalid");
             }
-
             }
 
     }
