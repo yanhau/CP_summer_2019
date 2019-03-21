@@ -11,10 +11,10 @@ public class TickTackToe {
         System.out.println(row2[2]);
 
         // run function on this model to determine if there is a winner
-        int[][] ticktack = new int[] {
+        int[][] ticktack = new int[][] {
                 new int [] {1,0,0},
                 new int [] {0,1,0},
                 new int [] {0,0,1},
-        }
+        };
     }
 }
