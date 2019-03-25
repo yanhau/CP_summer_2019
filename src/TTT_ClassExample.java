@@ -1,4 +1,6 @@
-public class TickTackToe {
+import java.util.Scanner;
+
+public class TTT_ClassExample {
 
     public static void main(String[] args) {
         int[][] ticktacktoe = new int[3][3];
@@ -17,4 +19,5 @@ public class TickTackToe {
                 new int [] {0,0,1},
         };
     }
+
 }
