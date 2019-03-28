@@ -1,4 +1,4 @@
-package pl.waw.sgh.test;
+package pl.waw.sgh;
 
 import pl.waw.sgh.Blocks;
 
