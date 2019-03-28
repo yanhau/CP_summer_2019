@@ -1,6 +1,5 @@
 package pl.waw.sgh;
 
-import java.sql.SQLOutput;
 
 public class SumArgs {
     public static void main(String[] args) {
