@@ -1,3 +1,5 @@
+package pl.waw.sgh;
+
 import java.util.HashMap;
 import java.util.Map;
 

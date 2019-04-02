@@ -1,6 +1,8 @@
+package pl.waw.sgh;
+
 public class Hello {
     public static void main(String[] inputargs) {
-        System.out.println("Hello!!!");
+        System.out.println("pl.waw.sgh.Hello!!!");
 
         Integer a = 5;
         Integer b, c;
@@ -20,7 +22,7 @@ public class Hello {
         String s3 = s1.toUpperCase();
 
         System.out.println(s3.charAt(1));
-        s1 = "Hello John";
+        s1 = "pl.waw.sgh.Hello John";
 
         int j = s1.indexOf("Jo");
         System.out.println(j);
