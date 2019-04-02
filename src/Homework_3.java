@@ -10,7 +10,7 @@ public class Homework_3 {public static void main(String[] args) throws IOExcepti
     while (fileScanner.hasNext()) {
         String line = fileScanner.nextLine();
         String[] cells = line.split(",");
-        System.out.println(cells[1]);
+        System.out.println(cells[0]);
         System.out.println(line);
     }
 }
