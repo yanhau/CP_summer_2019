@@ -9,7 +9,7 @@ public class FileOperations {
 
     public static void main(String[] args) throws IOException {
         //String path = ".." + File.separator + "MYDIR/SUBDIR/myfile.txt";
-        String path = "c:/users/prubac/Desktop/tick.csv";
+        String path = "C:/Users/Yan Hau/Dropbox/Computer Programming/TTT.csv";
 
         //"\n" "\t"
         //"\r\n"
