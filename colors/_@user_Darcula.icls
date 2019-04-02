@@ -1,0 +1,18 @@
+<scheme name="_@user_Darcula" version="142" parent_scheme="Darcula">
+  <metaInfo>
+    <property name="created">2019-03-28T09:55:00</property>
+    <property name="ide">idea</property>
+    <property name="ideVersion">2018.3.5.0.0</property>
+    <property name="modified">2019-03-28T10:11:04</property>
+    <property name="originalScheme">Darcula</property>
+  </metaInfo>
+  <attributes>
+    <option name="TEXT">
+      <value>
+        <option name="FOREGROUND" value="10101" />
+        <option name="BACKGROUND" value="dadada" />
+        <option name="EFFECT_TYPE" value="5" />
+      </value>
+    </option>
+  </attributes>
+</scheme>
