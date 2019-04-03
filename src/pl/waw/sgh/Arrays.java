@@ -23,5 +23,11 @@ public class Arrays {
         for (String el : strArr) {
             System.out.println("My strArr is: " + el);
         }
+        // to convert string to int
+        String [] str = {"123", "345", "437", "894"};
+        int size = str.length;
+        int [] arr = new int [size];
+        for(int i=0; i<size; i++) {
+            arr[i] = Integer.parseInt(str[i]);
     }
 }
