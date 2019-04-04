@@ -10,8 +10,13 @@ public class FileSizeCalculator {
         if(inFile.isDirectory()) {
             for(File f: inFile.listFiles()) {
                 System.out.println(f.toString() + " " + f.length());
-                sum += f.length();
+                //This code does not run on sub directories
+                // sum += f.length();
+                // but the code below allows for summing of files in sub directories
+                sum += sumSize(f);
             }
+        } else {
+            return inFile.length();
         }
         return sum;
     }
