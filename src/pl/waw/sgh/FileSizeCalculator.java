@@ -27,12 +27,10 @@ public class FileSizeCalculator {
 
         System.out.println(sumSize(mypath));
 // only reads files in this folder, but does not open any other subfolders
-        if (mypath.isDirectory()) {
-            for (File f : mypath.listFiles()) {
-                System.out.println(f.toString() + "" + f.length());
-            }
-        }
 
     }
-
 }
+
+
+
+
