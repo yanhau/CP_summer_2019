@@ -21,9 +21,6 @@ public class Homework_3 {
         arr[rownum][1] = Integer.parseInt(cells[1]);
         arr[rownum][2] = Integer.parseInt(cells[2]);
         rownum++;
-        /*for (int i=0; i<3 ; i++) {
-            for (int j=0; j<3; j++) {
-                arr[j][i] = Integer.parseInt(cells[j]);*/
             }
         System.out.println(arr[1]);
         if(// checking for horizontal victory
