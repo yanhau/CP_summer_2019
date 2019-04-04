@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Scanner;
 
 
@@ -22,10 +23,10 @@ public class Homework_3 {
         arr[rownum][2] = Integer.parseInt(cells[2]);
         rownum++;
             }
-        System.out.println(arr[1]);
+        System.out.println(Arrays.toString(arr[1]));
         if(// checking for horizontal victory
                         (arr[0][0]+arr[0][1]+arr[0][2]) == 3 ||
-                        (arr[1][0]+arr[1][1]+arr[1][2]) == 3 ||
+                        (arr[1][0]+arr[1][1]+arr[1][2]) == 3  ||
                         (arr[2][0]+arr[2][1]+arr[2][2]) == 3 ||
            // checking for vertical victory
                         (arr[0][0]+arr[1][0]+arr[2][0]) == 3 ||
