@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Homework_4 {
-
+    public static int[][] stocks = new int[63][4]
     public static int rownum = 0;
 
 

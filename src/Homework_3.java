@@ -23,7 +23,7 @@ public class Homework_3 {
         arr[rownum][2] = Integer.parseInt(cells[2]);
         rownum++;
             }
-        System.out.println(Arrays.toString(arr));
+        System.out.println(Arrays.toString(arr[1]));
         if(// checking for horizontal victory
                         (arr[0][0]+arr[0][1]+arr[0][2]) == 3 ||
                         (arr[1][0]+arr[1][1]+arr[1][2]) == 3  ||
