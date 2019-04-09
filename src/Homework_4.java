@@ -15,9 +15,9 @@ public class Homework_4 {
         while (fileScanner.hasNext()) {
             String line = fileScanner.nextLine();
             String[] cells = line.split(",");
-            arr[rownum][0] = Integer.parseInt(cells[0]);
-            arr[rownum][1] = Integer.parseInt(cells[1]);
-            arr[rownum][2] = Integer.parseInt(cells[2]);
+            stocks[rownum][0] = Integer.parseInt(cells[0]);
+            stocks[rownum][1] = Integer.parseInt(cells[1]);
+            stocks[rownum][2] = Integer.parseInt(cells[2]);
             rownum++;
         }
     }
