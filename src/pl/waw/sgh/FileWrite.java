@@ -8,7 +8,7 @@ import java.io.IOException;
 public class FileWrite {
 
     public static void main(String[] args) {
-        String OUT_PATH = "C:/Users/Yan Hau/Dropbox/Computer Programming/out.txt";
+        String OUT_PATH = "C:/Users/Yan Hau/Dropbox/Computer Programming/out.csv";
         File outFile = new File(OUT_PATH);
 
         try {
@@ -17,7 +17,7 @@ public class FileWrite {
             BufferedWriter bw = new BufferedWriter(fw);
             bw.write("Header of my file");
             bw.newLine();
-            bw.write("23;23;242456");
+            bw.write("23");
             bw.newLine();
             // position in the ASCII table
             bw.write(69);
