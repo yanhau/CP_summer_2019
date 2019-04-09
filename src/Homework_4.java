@@ -8,7 +8,7 @@ public class Homework_4 {
 
 
     public static void main(String[] args) throws IOException {
-        String path = "C:/Users/Yan Hau/Dropbox/Computer Programming/TTT.csv";
+        String path = "C:/Users/Yan Hau/Dropbox/Computer Programming/Homework4.csv";
         File file = new File(path);
 
         Scanner fileScanner = new Scanner(file);
@@ -20,6 +20,8 @@ public class Homework_4 {
             arr[rownum][2] = Integer.parseInt(cells[2]);
             rownum++;
         }
-
-
+    }
 }
+
+
+
