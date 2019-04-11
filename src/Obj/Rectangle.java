@@ -1,4 +1,4 @@
-package pl.waw.sgh.obj;
+package Obj;
 
 public class Rectangle {
 
