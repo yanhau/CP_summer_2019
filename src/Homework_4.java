@@ -1,9 +1,6 @@
-import java.awt.*;
 import java.io.*;
 import java.util.Arrays;
 import java.util.Scanner;
-import java.io.PrintWriter;
-
 import static java.lang.Double.parseDouble;
 import static java.lang.String.valueOf;
 
