@@ -17,9 +17,9 @@ public class Triangle extends ShapeForHomework {
     public double perimeter() {
         return a + b + c;
     }
-/*    @Override
+@Override
     public double area() {
-        double s = (a + b + c) / 2;
-        return Math.sqrt(s * (s - a) * (s - b) * (s - c));
-    }*/
+        return (Math.sqrt(3)/4)*(a*a);
+    }
+
 }
