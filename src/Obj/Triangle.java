@@ -13,15 +13,13 @@ public class Triangle extends Shape1 {
         this.c = c;
 
     }
-
-    @Override
-    public double area() {
-        double s = (a + b + c) / 2;
-        return Math.sqrt(s * (s - a) * (s - b) * (s - c));
-    }
-
-    @Override
+@Override
     public double perimeter() {
         return a + b + c;
     }
+/*    @Override
+    public double area() {
+        double s = (a + b + c) / 2;
+        return Math.sqrt(s * (s - a) * (s - b) * (s - c));
+    }*/
 }
