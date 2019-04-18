@@ -1,6 +1,5 @@
 package pl.waw.sgh.shapes;
-// Check link below for some examples
-// https://codereview.stackexchange.com/questions/83769/implement-a-shape-abstract-class
+
 public class PlayWithShapes {
 
     public static void main(String[] args) {
