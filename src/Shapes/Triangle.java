@@ -1,6 +1,6 @@
 package Shapes;
 
-public class Triangle extends Shape1 {
+public class Triangle extends ShapeForHomework {
     private double a, b, c;
 
     public Triangle() {
