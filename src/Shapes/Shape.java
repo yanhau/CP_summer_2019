@@ -1,6 +1,6 @@
-package pl.waw.sgh.shapes;
+package Shapes;
 
-public abstract class Shape {
+public abstract class Shape implements Comparable<Shape> {
 
     double parA;
     double parB;
@@ -27,11 +27,15 @@ public abstract class Shape {
         // compare the Double value of our surface with the surface of the given shape
         return Double.valueOf(calcSurface()).compareTo(shape.calcSurface());
     }
-// if you make a common mistake of misspelling a method name or not correctly matching the parameters,
-// you will be warned that you method does not actually override as you think it does.
-// Secondly, it makes your code easier to understand because it is more obvious when methods are overwritten.
+
+
     @Override
     public String toString() {
         return "Shape[parA=" + parA + ", parB=" +parB + "]";
     }
 }
+
+// for @Override
+// if you make a common mistake of misspelling a method name or not correctly matching the parameters,
+// you will be warned that you method does not actually override as you think it does.
+// Secondly, it makes your code easier to understand because it is more obvious when methods are overwritten.

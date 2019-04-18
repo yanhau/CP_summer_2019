@@ -1,4 +1,4 @@
-package Obj;
+package Shapes;
 
 public class Triangle_Homework {
     public static void main(String[] args) {

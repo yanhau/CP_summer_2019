@@ -1,4 +1,4 @@
-package Obj;
+package Shapes;
 
 public class Triangle extends Shape1 {
     private double a, b, c;

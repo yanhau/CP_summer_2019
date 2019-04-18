@@ -1,4 +1,4 @@
-package pl.waw.sgh.shapes;
+package Shapes;
 
 public class Circle extends Shape {
     public Circle(double parA) {
@@ -6,7 +6,7 @@ public class Circle extends Shape {
     }
 
     public double calcSurface() {
-        return Math.PI * Math.pow(parA, 2);
+        return Math.PI*Math.pow(parA,2);
     }
 
     @Override
