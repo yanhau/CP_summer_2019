@@ -15,7 +15,6 @@ public class Homework_6 {
 
         String line = reader.readLine();
         while(line != null) {
-            //System.out.println("Processing line: " + line);
 
             if(!line.trim().equals("")) {
                 String [] words = line.split(" ");
