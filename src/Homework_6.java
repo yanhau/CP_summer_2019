@@ -3,7 +3,7 @@ import java.io.FileReader;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Homework_5 {
+public class Homework_6 {
 
     public static void main(String[] args) throws Exception {
 
