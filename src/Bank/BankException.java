@@ -6,4 +6,3 @@ public class BankException extends Exception {
         super(msg);
     }
 }
-© 2019 GitHub, Inc.
