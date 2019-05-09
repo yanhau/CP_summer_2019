@@ -4,8 +4,10 @@ import java.math.BigDecimal;
 
 public class PlayWithBank {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws NotEnoughMoneyException {
+        //try {
         Bank bank = new Bank("MyBank");
+        //bank = null;
         Customer c1 = bank.newCustomer("John", "Smith", "john@smith.com");
         Customer c2 = bank.newCustomer("Anne", "Brown", "anne@brown.com");
 
@@ -15,7 +17,7 @@ public class PlayWithBank {
         Account a3 = bank.newCheckingAccount(c2, "EUR");
 
         a2.deposit(450.8);
-        a2.charge(100.0);
+        a2.charge(500.0);
 
         a3.deposit(222.0);
 
@@ -31,5 +33,9 @@ public class PlayWithBank {
         BigDecimal c = BigDecimal.valueOf(456.5);
         b = b.add(c);
         System.out.println(b);
+        /*} catch (Exception e) {
+            e.printStackTrace();
+            System.err.println(e.getMessage());
+        }*/
     }
 }
