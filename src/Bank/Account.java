@@ -1,8 +1,9 @@
 package Bank;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
-public abstract class Account {
+public abstract class Account implements Serializable {
 
     private Integer accountID;
 

@@ -1,43 +1,111 @@
 package Bank.ui;
 
-import com.sun.java.swing.plaf.windows.WindowsLookAndFeel;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+public class Bank implements Serializable {
 
-public class FirstWindow {
+    private String name;
 
-    public static void main(String[] args) {
+    private List<Customer> customerList = new ArrayList<>();
 
-        try {
-            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-        } catch (UnsupportedLookAndFeelException | IllegalAccessException
-                | InstantiationException | ClassNotFoundException e) {
-            e.printStackTrace();
+    private List<Account> accountList = new ArrayList<>();
+
+    private Integer lastCustID = 0;
+
+    private Integer lastAccID = 1000;
+
+    public Bank(String name) {
+        this.name = name;
+    }
+
+    public Customer newCustomer(String firstName, String lastname, String email) {
+        Customer cust = new Customer(lastCustID++, firstName, lastname, email);
+        customerList.add(cust);
+        return cust;
+    }
+
+    private Account newAccount(Customer customer, String currency, boolean isChecking) {
+        Account acc = isChecking ?
+                new CheckingAccount(lastAccID++, currency, customer)
+                : new SavingsAccount(lastAccID++, currency, customer);
+        accountList.add(acc);
+        return acc;
+    }
+
+    public Account newCheckingAccount(Customer customer, String currency) {
+        return newAccount(customer, currency, true);
+    }
+
+    public Account newSavingsAccount(Customer customer, String currency) {
+        return newAccount(customer, currency, false);
+    }
+
+    public void deleteAccount(Account acc) {
+        accountList.remove(acc);
+    }
+
+    public Customer findFirstCustomer() {
+        if (customerList.size()>0)
+            return customerList.get(0);
+        else
+            return null;
+    }
+
+    public Account findAccountByID(Integer accID) throws NonExistingAccountException {
+        for (Account acc : accountList) {
+            if (acc.getAccountID().equals(accID))
+                return acc;
         }
-        JFrame frame = new JFrame("First Window");
-        frame.setSize(800, 500);
-        //frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        //frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-        LayoutManager layoutManager = new FlowLayout();
-        frame.setLayout(layoutManager);
-        JPanel mainPanel = new JPanel();
-        mainPanel.add(new JLabel("Hello, what's your name:"));
-        JTextField nameField = new JTextField(50);
-        mainPanel.add(nameField);
-        JButton okButton = new JButton("OK");
-        okButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(frame,
-                        "Hello " + nameField.getText());
-            }
-        });
-        mainPanel.add(okButton);
-        frame.add(mainPanel);
-        frame.setVisible(true);
+        throw new NonExistingAccountException("Account with ID: " + accID + " not found!");
+    }
+
+    public void transfer(Integer fromAccID, Integer toAccID, double toTransfer) throws NotEnoughMoneyException, NonExistingAccountException {
+        //public void transfer(Integer fromAccID, Integer toAccID, double toTransfer) throws BankException {
+        transfer(findAccountByID(fromAccID), findAccountByID(toAccID), toTransfer);
+    }
+
+    public void transfer(Account fromAcc, Account toAcc, double toTransfer) throws NotEnoughMoneyException {
+        fromAcc.charge(toTransfer);
+        toAcc.deposit(toTransfer);
+    }
+
+    public Customer prevCustomer(Customer curCust) {
+        int curCustIdx = customerList.indexOf(curCust);
+        if (curCustIdx > 0) {
+            return customerList.get(curCustIdx - 1);
+        } else {
+            //customerList.size()
+            return null;
+        }
+    }
+
+    public Customer nextCustomer(Customer curCust) {
+        int curCustIdx = customerList.indexOf(curCust);
+        if (curCustIdx < customerList.size()-1) {
+            return customerList.get(curCustIdx + 1);
+        } else {
+            //customerList.size()
+            return null;
+        }
+    }
+
+    public List<Account> findAccountByCustomer(Customer cust) {
+        List<Account> acList = new ArrayList<>();
+        for (Account acc : accountList) {
+            if (acc.getCustomer()==cust)
+                acList.add(acc);
+        }
+        return acList;
+    }
+
+    @Override
+    public String toString() {
+        return "Bank{" +
+                "'" + name + '\'' +
+                "\ncusts=" + customerList +
+                "\naccs=" + accountList +
+                '}';
     }
 }
